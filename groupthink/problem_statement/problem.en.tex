@@ -1,0 +1,52 @@
+\problemname{Groupthink}
+
+\illustration{0.3}{huddle.jpg}{Image by \href{http://www.istockphoto.com/ca/portfolio/kabliczech?excludenudity=true&sort=best}{kabliczech (iStock)}, Used under license}
+
+One of the most fundamental structures in abstract algebra is called a \emph{magma}.
+A magma is a pair $(M,\bullet)$, where $M$ is a nonempty set and $\bullet$ is a
+binary operation on $M$. This means that $\bullet$ maps each ordered pair
+of elements $(x,y)$ in $M$ to an element in $M$ (in other words, $\bullet$ is
+a function from $M \times M$ to $M$). The element to which $\bullet$ maps $(x,y)$
+is denoted $x \bullet y$.
+
+Magmas that satisfy certain properties are given more specialized names.
+Here are three important properties that $(M,\bullet)$ could satisfy:
+
+\begin{itemize}
+    \item \textbf{P1} \emph{(associativity)}:  For all $x,y,z \in M$,
+    $(x \bullet y) \bullet z = x \bullet (y \bullet z)$.
+
+    \item \textbf{P2} \emph{(identity)}:  There is an element $I \in M$ such that
+    $x \bullet I = I \bullet x = x$ for all $x \in M$ ($I$ is called an \emph{identity}).
+
+    \item \textbf{P3} [depends on \textbf{P2}] \emph{(inverses)}:  There is an
+    identity $I \in M$, and for every $x \in M$, there exists $x^* \in M$ such that
+    $x \bullet x^* = x^* \bullet x = I$ ($x^*$ is called an \emph{inverse} of $x$).
+\end{itemize}
+
+A magma that satisfies \textbf{P1} is called a \emph{semigroup}.
+A semigroup that satisfies \textbf{P2} is called a \emph{monoid}.
+A monoid that satisfies \textbf{P3} is called a \emph{group}.
+Given a magma $(M,\bullet)$, determine its most specialized name.
+
+
+\section*{Input}
+
+The input consists of a single test case specifying a magma $(M,\bullet)$.
+The first line contains an integer $n$ $(1 \leq n \leq 120)$, the size of $M$.
+Assume that the elements of $M$ are indexed $0,1,2,\ldots,n-1$.
+Each of the next $n^2$ lines contains three integers $i~j~k$
+$(0 \leq i,j,k \leq n-1)$, meaning that $x \bullet y = z$, where $x$
+is the element indexed by $i$, $y$ is the element indexed by $j$, and $z$
+is the element indexed by $k$. Each ordered pair $(i,j)$ will appear exactly once
+as the first two values on a line.
+
+
+\section*{Output}
+
+The output consists of a single line. Output \textbf{\texttt{group}} if $(M,\bullet)$
+satisfies \textbf{P1}, \textbf{P2}, and \textbf{P3}. Output \textbf{\texttt{monoid}}
+if $(M,\bullet)$ satisfies \textbf{P1} and \textbf{P2}, but not \textbf{P3}.
+Output \textbf{\texttt{semigroup}} if $(M,\bullet)$ satisfies \textbf{P1}, but not
+\textbf{P2} (and therefore not \textbf{P3}). Otherwise, output \textbf{\texttt{magma}}.
+
