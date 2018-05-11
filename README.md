@@ -7,5 +7,5 @@ Note that non-administrator users have Pull Only access.
 
 To clone this repository, enter something like the following at the command line of your computer:
   ```
-  git clone https://github.com/atlantic-preliminary/acpc-2018
+  git clone https://github.com/atlantic-preliminary/acpc-2017
   ```
