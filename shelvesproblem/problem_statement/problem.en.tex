@@ -1,0 +1,70 @@
+\problemname{Optimizing Stock on Shelves}
+
+Your friend, who is a store manager, is looking at optimising his sales
+by reorganizing his products strategically on the shelves. Each product
+being sold comes in one box, to be put on the shelves. The box contains
+multiple such items, and we assume that we will not run out of items.
+The boxes are of various sizes though. Note: the size here refers only
+to the visible (front) length of the box, not how tall it is or how deep
+it is. You cannot turn the box $90$ degrees to reduce or enlarge its
+visible side.
+
+The display area contains $4$ shelves, each of a fixed length (provided in
+the input). When placing boxes on one shelf, you have to make sure that
+they all fit (i.e., the sum of the boxes' lengths does not exceed the
+size of the shelf). The input may contain more boxes or less than what
+can fit in the entire display area. Each box contain a different
+product.
+
+The placement of a product on the shelves will have an impact on how
+many will be sold. For example, being on the top ($4\textsuperscript{th}$)
+shelf brings higher visibility usually, so more customers will see it
+and buy it. Only the vertical placement is important here to the
+expected sales of the product, not the horizontal placement (i.e., we
+just want to know on which shelf, between $1$ and $4$, each box should go).
+For each product, you can actually evaluate how much can be sold (in
+dollars, referred to as ``expected sales'') when placed on each of the
+shelves. For simplicity, this is a function of the form $f(i) = a + b * i$
+where $i$ is the shelf number (between $1$ and $4$). Those functions are
+different for each product, and are provided in the input.
+
+What you have to do is to find the optimal placement of the boxes that
+maximizes the sum of the expected sales of the products on display.
+
+\section*{Input:}
+The first line contains one positive integer, smaller than $20$,
+representing the size (length) of the shelves in the display area. The
+second line contains one positive integer $N$, smaller than $100$,
+representing the number of boxes available, to be put on the shelves.
+Then there are $N$ lines, one per box, each containing $3$ integers: the
+first one (always positive, and smaller than $20$) represent the size
+(length) of the box. The other two numbers are the $a$ and $b$
+coefficients in the formula for the expected sales. Note that $a$ or
+$b$ might be negative, but the function $f(i)$ will always evaluate to a
+positive integer for the range $i=1\dots 4$.
+
+\section*{Output:}
+A single integer, representing the maximum total expected sales.
+
+In the first example provided below, the optimal solution of $49$ is
+achieved in the following way:
+
+On row $4$, put boxes $(3, 1, 4)$ and $(2, 1, 2)$ ($\text{expected sales}=17+9=26$)
+
+On row $3$, put boxes $(3, 2, 3)$ and $(1, -1, 2)$ ($\text{expected sales}=11+5=16$)
+
+On row $2$, do not put any boxes
+
+On row $1$, put box $(2, 8, -1)$ ($\text{expected sales}=7$)
+
+In the second example, the optimal result of $91$ is achieved in the
+following way:
+
+On row $4$, put boxes $(2, 4, 4)$, $(1, 3, 3)$, and $(1, 1, 1)$ ($\text{expected sales}=20+15+5=40$)
+
+On row $3$, put boxes $(3, 10, 4)$ and $(1, 1, 1)$ ($\text{expected sales}=22+4=26$)
+
+On row $2$, put $4$ boxes $(1, 1, 1)$ ($\text{expected sales}=3+3+3+3=12$)
+
+On row $1$, put $3$ boxes $(1, 1, 1)$ and the box $(1 9, -2)$ ($\text{expected sales}=2+2+2+7=13$)
+

@@ -1,0 +1,28 @@
+\problemname{Slider Puzzle}
+\illustration{0.5}{slider-puzzle.png}{Image by {Scott Bateman}, Used under license}
+
+A slider puzzle consists of a row of squares each of which contains a
+single digit integer, like the illustration.
+
+A circle marker starts on the initial square on the left and can be
+moved to other squares along the row. At each step in the puzzle, you
+may only move the marker the number of squares indicated by the integer
+in the square it currently occupies, but it the marker can be moved 
+either left or right along the row. The marker may not move past either 
+end of the puzzle. For example, in the puzzle above the only legal 
+first move is to move the marker three squares to the right because 
+there is no room to move three spaces to the left.
+
+The goal of the puzzle is to move the marker to the 0 at the far end of
+the row, on the right. However, not every puzzle has a valid solution.
+
+\section*{Input}
+Input for this problem will be a number between $1$ and $100$ inclusive
+representing the number of puzzles in the input, each puzzle is between
+$10$ and $101$ digits long. Each individual puzzle will be on one line and
+consist of a series of integers separated by spaces. 
+
+\section*{Output}
+Output should simply state whether ``Puzzle N is solvable.'' or 
+``Puzzle N is not solvable.'' where $N$ refers to the puzzle instance.
+
