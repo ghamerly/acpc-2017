@@ -1,0 +1,47 @@
+In Major League Baseballs American League there are 10 positions a player can occupy as follows: First Base (1B), Second Base (2B), Shortstop (SS), Third Base (3B), Catcher (C), Pitcher (P), Left Field (LF), Center Field (CF), Right Field (RF) and Designated Hitter (DH). Suppose Baseball cards come in packages of 10 cards per pack and that each card lists a single player (their name) with the positions that player is qualified to play. For example a baseball card may list:
+
+Ruth: 1B, P, LF, CF, RF, X
+
+Indicating that Ruth is a baseball player who plays any of first base, pitcher, left field, center field or right field. The card doesn't list DH however it is always assumed that a player can be played as a designated hitter as well even though it is never listed as a qualified position. The list of qualified positions is terminated with an X (X is not a position).
+
+Your task is to write a program that determines given a list of 10 baseball cards in a pack, whether a full baseball team can be fielded or not from those cards. I.e., can all of the 10 positions be filled with unique players who are qualified to play their assigned position. Aside from DH for which any player is able to play, a player may be assigned any single position listed on their baseball card. 
+
+Input is a pack containing 10 baseball cards, one card per line. A Baseball card is formatted with "Name: p1, p2, ..., px, X" Where each of the pi’s is a position for which the player is qualified to play and is always terminated with 'X'
+
+Note that: DH is never listed as a qualified position but is always assumed to be a position that a player is qualified to play, and Names are a single sequence of upper and lower case letters terminated by a colon ‘:’.
+
+The output is a single word either True or False. True if those 10 cards may be distributed such that a unique player occupies each of the 10 positions in baseball and is qualified to occupy that position and False otherwise.
+
+Note: Player names will be unique (containing only letters Aa-Zz) and a single player will not show up multiple times in the same pack of cards.
+
+
+Sample Input 1:
+Ruth: 1B, P, LF, CF, RF, X
+Musial: 1B, LF, RF, X
+Jenkins: P, X
+Cobb: CF, X 
+Berra: C, LF, X
+Mantle: CF, 1B, X
+Hornsby: 2B, SS, 3B, X
+Wagner: SS, RF, 1B, X
+Schmidt: 1B, 3B, X
+Brett: 1B, 3B, X
+
+Sample Output 1:
+True
+
+Sample Input 2:
+Ruth: 1B, P, LF, CF, RF, X
+Musial: 1B, LF, RF, X
+Papi: 1B, X
+Cobb: CF, X
+Berra: C, LF, X
+Mantle: CF, 1B, X
+Hornsby: 2B, SS, 3B, X
+Wagner: SS, RF, 1B, X
+Schmidt: 1B, 3B, X
+Brett: 1B, 3B, X
+
+Sample Output 2:
+False
+

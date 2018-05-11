@@ -1,0 +1,42 @@
+\problemname{Integrity for spies}
+
+Two friends decide to communicate with each other using a secret code over numbers from $0$ to $ b-1$.
+Each message can be arbitrarily long, but it must be validated using the following formula:
+\begin{displaymath}
+\mbox{current value of the message} = 
+ (\mbox{value of the message read so far})*b + 
+ \mbox{new number read}.
+\end{displaymath}
+
+The {\tt current value of the message} at  the end of the message must be a multiple of $k$.
+
+\section*{Input}
+
+The input starts with $n$, the number of test cases, on a line by
+itself.  The remainder of the file contains $n$ test cases.  Each test
+case consists of $b$, $m$ (the number of messages in this test case),
+and $k$ on lines by themselves, followed by $m$ messages one per line,
+each line terminated by a $-1$.  You may assume $2 \leq b \leq 36$.
+Schematically, the input looks like
+\begin{verbatim}
+n
+b_1
+m_1
+k_1
+message 1 of test case 1
+...
+message m1 of test case 1
+...
+b_2
+m_2 
+k_2
+m_2 messages of test case 2
+the other n-2 test cases
+\end{verbatim}
+
+
+\section*{Output}
+Output is a sequence of $0$'s and $1$'s, $1$ for valid messages and
+$0$ for those that are non-valid, i.e., $n$ binary strings (each of
+length $m_i$ for test case $i$). Messages with numbers larger than $b-1$
+should be considered invalid.
