@@ -5,7 +5,7 @@ This is an **_archived_** version of the problem set used in the 2017 Atlantic C
 
 Note that non-administrator users have Pull Only access.
 
-To clone this repository, enter something like the following at the command line of your computer:
+To clone this repository, enter something like the following at the command line:
   ```
   git clone https://github.com/atlantic-preliminary/acpc-2017
   ```
