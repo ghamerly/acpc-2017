@@ -1,0 +1,6 @@
+This is the monoid ({0,2,4}, multiplication mod 6), with the elements
+indexed as follows:
+0 --> 0
+2 --> 1
+4 --> 2
+It turns out that 4 is the identity for this monoid.
