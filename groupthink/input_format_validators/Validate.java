@@ -52,6 +52,7 @@ public class Validate{
 				int k = Integer.parseInt(tokens[2]);
 				if (i < 0 || i >= n || j < 0 || j >= n || k < 0 || k >= n){
 					System.err.println("One of the tokens on line " + index + " (out of n^2) is out of range");
+					System.exit(BAD_EXIT);
 				} // if
 				if (!used[i][j]){
 					numUsed++;
