@@ -1,0 +1,10 @@
+INT(1,100,ts) NEWLINE
+REP(ts)
+    INT(1,30,n) NEWLINE
+    REPI(i,n)
+        REGEX("[01]{1,13}",w[i]) NEWLINE
+    END
+    ASSERT(UNIQUE(w))
+    UNSET(w)
+    REGEX("[01]{1,3000}") NEWLINE
+END

@@ -1,0 +1,5 @@
+# this does everything except check for the uniqueness of the positions
+REPI(i,10)
+    REGEX("[A-Za-z]{1,10}",n[i]) STRING(":") SPACE REGEX("(([123]B|SS|C|P|[LCR]F), ){1,9}X") NEWLINE
+END
+ASSERT(UNIQUE(n))

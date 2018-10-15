@@ -10,13 +10,16 @@ Your task is to write a program that determines given a list of $10$ baseball ca
 
 \section*{Input}
 Input is a pack containing $10$ baseball cards, one card per line. A
-Baseball card is formatted with "Name: p1, p2, ..., px, X" where each
-of the pi’s is a position for which the player is qualified to play
-and is always terminated with 'X'
+Baseball card is formatted with ``\texttt{Name: p1, p2, \ldots, px, X}'' 
+Player names are unique (containing only letters a--z and A--Z) and a single player 
+does not show up multiple times in the same pack of cards.
 
-\emph{Note:} DH is never listed as a qualified position but is always assumed to be a position that a player is qualified to play, and Names are a single sequence of upper and lower case letters terminated by a colon ‘:’.
+Each of the pi's is a position for which the player is qualified to play.
+The list of positions is always terminated with `X', which is not considered a position.
+There are at most $9$ positions listed, all unique.
+
+\emph{Note:} DH is never listed as a qualified position but is always assumed to be a position that a player is qualified to play.
 
 \section*{Output}
 The output is a single word either True or False. True if those $10$ cards may be distributed such that a unique player occupies each of the $10$ positions in baseball and is qualified to occupy that position and False otherwise.
 
-\emph{Note:} Player names will be unique (containing only letters Aa-Zz) and a single player will not show up multiple times in the same pack of cards.

@@ -6,7 +6,7 @@ An AVL tree, named after its inventors, Adelson-Velskii and Landis, is a binary 
 with an additional constraint that keeps the tree balanced. The \emph{balance factor} of
 a node $x$, denoted $\mathit{bf}(x)$, is defined to be $H(x_R) - H(x_L)$, where $H(\,)$
 denotes height, $x_R$ is the right subtree of $x$, and $x_L$ is the left subtree of $x$.
-(The height of a tree is the number of edges in the longest simple path from the root
+(The height of a (sub)tree is the number of edges in the longest simple path from its root
 to any leaf. It follows that the height of a tree containing a single node is $0$.
 The height of the empty tree, i.e., the tree with no nodes, is typically defined to be $-1$.)
 In an AVL tree, the only balance factors permitted are $\{-1,0,1\}$, i.e., $|\mathit{bf}(x)| \leq 1$
